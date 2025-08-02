@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background: #111;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #1e1e1e;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 28px;
+      color: #00ffff;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00ffff;
+    }
+    section {
+      padding: 80px 50px;
+      animation: fadeUp 1s ease-in-out;
+    }
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .home img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    .skills, .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .skill, .project {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .skill:hover, .project:hover {
+      transform: translateY(-5px);
+      background-color: #333;
+    }
+    .contact {
+      text-align: center;
+    }
+    .socials a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+    .socials a:hover {
+      color: #00ffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="home">
+    <img src="https://via.placeholder.com/150" alt="My Photo" />
+    <h2>Hello, I'm Mobarik</h2>
+    <p>A passionate Software Engineer.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>This is a short description about yourself. You can write your background, education, and interests here.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">PHP</div>
+      <div class="skill">MySQL</div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio">
+      <div class="project">Project 1</div>
+      <div class="project">Project 2</div>
+      <div class="project">Project 3</div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>You can reach me at: your.email@example.com</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+</body>
+</html>
